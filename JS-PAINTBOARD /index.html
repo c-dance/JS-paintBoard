@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaintJS</title>
+    <link rel="stylesheet" href ="./styles.css">
+</head>
+<body>
+    <header>
+            <h1>PAINTJS</h1>
+    </header>
+    <!--canvas-->
+    <section class="canvas">
+        <canvas id="background-layer"></canvas>
+        <canvas id="photo-layer"></canvas>
+        <canvas id="line-layer"></canvas>
+    </section>
+    <!--section:controls drawing-->
+    <section class="controls-mode" id="editMode">
+        <div class="btns">
+            <button id="clean">CLEAN</button>
+            <button id="back">BACK</button>
+            <button id="save">SAVE</button>
+        </div>
+    </section>
+     <!--section:uploading photo-->
+     <section class="controls-mode" id="photoMode">
+        <div class="controls-upload">
+            <input type="file" id="photo-uploader" accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="controls-transparency">
+            <input type="range" id="photo-transparency" min=0 max=1 step=0.1 value=0.3>
+        </div>
+    </section>
+    <section class="controls-mode" id="paintMode">
+        <div class="btns">
+            <button id="background">BACKGROUND</button>
+            <button id="brush">BRUSH</button>
+        </div>
+            <div id="background-mode">
+                <input type="color" value="#ffffff" id="background-color">
+            </div>
+            <div id="brush-mode">
+                <div id="brush-sizes">
+                    <div>
+                        <svg class="size"><rect x="15" y="18" width="30" height="5" rx="2" ry="2"></rect></svg>
+                    </div>
+                    <div>
+                        <svg class="size"><rect x="15" y="16" width="30" height="10" rx="4" ry="4"></rect></svg>
+                    </div>
+                    <div>
+                        <svg class="size"><rect x="15" y="13" width="30" height="15" rx="6" ry="6"></rect></svg>
+                    </div>
+                    <div>
+                        <svg class="size"><rect x="10" y="10" width="40" height="20" rx="8" ry="8"></rect></svg>
+                    </div>
+                    <div>
+                        <svg class="size"><rect x="10" y="7" width="40" height="25" rx="10" ry="10"></rect></svg>
+                    </div>
+                </div>
+                <div id="brush-colors">
+                    <div class="color" style="background-color: white;"></div>
+                    <div class="color" style="background-color: #dd2c00;"></div>
+                    <div class="color" style="background-color: #ff5722;"></div>
+                    <div class="color" style="background-color: #ffcd3c;"></div>
+                    <div class="color" style="background-color: #158467;"></div>
+                    <div class="color" style="background-color: #1b6ca8;"></div>
+                    <div class="color" style="background-color: #084177;"></div>
+                    <div class="color" style="background-color: #892cdc;"></div>
+                    <div class="color" style="background-color: black;"></div>  
+                </div>
+            </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
